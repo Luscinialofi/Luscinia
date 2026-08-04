@@ -193,9 +193,10 @@ footer {
 
 .social-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   margin-top: 30px;
+  width: 100%;
 }
 
 .social-grid a {
@@ -208,11 +209,32 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  transition: 0.2s;
+}
+
+.social-grid a:hover {
+  transform: translateY(-3px);
+  background: #333344;
 }
 
 .social-grid img {
   width: 60px;
   height: 60px;
+}
+
+/* MusicBrainz seul au centre */
+.social-grid a:last-child {
+  grid-column: 2;
+}
+
+@media (max-width: 700px) {
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .social-grid a:last-child {
+    grid-column: auto;
+  }
 }
   
 </style>
