@@ -236,7 +236,15 @@ footer {
     grid-column: auto;
   }
 }
-
+  
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+  width: 100%;
+}
+  
 .contact-grid img {
   width: 60px;
   height: 60px;
@@ -258,6 +266,35 @@ footer {
 .contact-grid a:hover {
   transform: translateY(-3px);
   background: #333344;
+}
+
+  .music-data {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.music-data a {
+  background: #22222d;
+  padding: 20px 40px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: 0.2s;
+}
+
+.music-data a:hover {
+  transform: translateY(-3px);
+  background: #333344;
+}
+
+.music-data img {
+  width: 50px;
+  height: 50px;
 }
   
 </style>
@@ -385,11 +422,6 @@ TikTok
 YouTube
 </a>
 
-<a href="https://musicbrainz.org/artist/9c3f56b1-4671-4a53-9a00-9abdd98a8255">
-<img src="musicbrainz.svg" alt="MusicBrainz logo">
-MusicBrainz
-</a>
-
 </div>
 
 </div>
@@ -413,7 +445,7 @@ For interviews, collaborations and music inquiries:
 
 <a href="mailto:Luscinia.lofi@gmail.com">
   <img src="gmail.svg" alt="Email">
-  Contact
+  Email
 </a>
 
 <a href="https://discord.gg/QUUfbkv4Z" target="_blank">
@@ -424,6 +456,29 @@ For interviews, collaborations and music inquiries:
 </div>
 
 </div>
+</section>
+
+  </section>
+
+<section>
+  <div class="container">
+
+    <div class="card">
+
+      <h2>Music data</h2>
+
+      <div class="music-data">
+
+        <a href="https://musicbrainz.org/artist/9c3f56b1-4671-4a53-9a00-9abdd98a8255">
+          <img src="musicbrainz.svg" alt="MusicBrainz">
+          MusicBrainz
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
   <footer>
