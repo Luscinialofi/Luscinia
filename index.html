@@ -236,6 +236,29 @@ footer {
     grid-column: auto;
   }
 }
+
+.contact-grid img {
+  width: 60px;
+  height: 60px;
+}
+
+.contact-grid a {
+  background: #22222d;
+  padding: 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: 0.2s;
+}
+
+.contact-grid a:hover {
+  transform: translateY(-3px);
+  background: #333344;
+}
   
 </style>
 
@@ -377,18 +400,19 @@ MusicBrainz
 <h2>Contact</h2>
 
 <p>
-For interviews, collaborations:
+For interviews, collaborations and music inquiries:
 <br>
-<a class="contact-link" href="mailto:Luscinia.lofi@gmail.com">
-<img src="gmail.svg" alt="Email">
-Contact
+<div class="contact-grid">
+
+<a href="mailto:Luscinia.lofi@gmail.com">
+  <img src="mail.svg" alt="Email">
+  Contact
 </a>
 
-  <a href="https://discord.gg/QUUfbkv4Z" target="_blank">
+<a href="https://discord.gg/QUUfbkv4Z" target="_blank">
   <img src="discord.svg" alt="Discord">
   Discord
 </a>
-</p>
 
 </div>
 
