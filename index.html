@@ -139,8 +139,40 @@ footer {
     font-size: 2.8rem;
   }
 }
+
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.platforms a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 25px;
+  background: #22222d;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+.platforms a:hover {
+  background: #333344;
+  transform: translateY(-2px);
+}
+
+.si {
+  font-size: 1.3rem;
+}
+  
 </style>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css">
+  
 </head>
 
 <body>
@@ -195,20 +227,29 @@ Luscinia is the Latin name for the nightingale, a bird famous for its beautiful 
 
 <h2>Listen to Luscinia</h2>
 
-<p>
-Discover Luscinia's lo-fi instrumental music on streaming platforms.
-</p>
+<div class="platforms">
 
-<a class="button" href="https://ffm.to/luscinia">
-All streaming platforms
+<a href="https://ffm.to/luscinia">
+<span class="si si-link"></span>
+Feature.fm
+</a>
+
+<a href="https://open.spotify.com/artist/22xYWlmxkScQvGOSHMawTr">
+<span class="si si-spotify"></span>
+Spotify
+</a>
+
+<a href="https://www.youtube.com/@Luscinia_lofi">
+<span class="si si-youtube"></span>
+YouTube
 </a>
 
 </div>
 
 </div>
+
+</div>
 </section>
-  
-<section>
 <div class="container">
 
 <div class="card">
