@@ -340,7 +340,7 @@ footer {
 
 #discography-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 18px;
   margin-top: 30px;
 }
@@ -372,33 +372,38 @@ footer {
 
 .release-content h3 {
   margin: 0;
-  font-size: .9rem;
+  font-size: .85rem;
 }
 
 .release-content p {
   margin-top: 5px;
   color: #aaa;
-  font-size: .75rem;
+  font-size: .7rem;
 }
 
 
-/* Responsive */
+/* Tablette */
 
-@media (max-width:900px){
+@media (max-width: 900px){
 
   #discography-grid {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
   }
 
 }
 
 
-@media (max-width:600px){
+/* Smartphone */
+
+@media (max-width: 600px){
 
   #discography-grid {
-    grid-template-columns: repeat(3,1fr);
-    gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
   }
+
+}
 
 }
 </style>
