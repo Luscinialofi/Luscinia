@@ -116,7 +116,7 @@ body {
   opacity: 0.8;
 }
 
-section {
+ {
   padding: 70px 0;
 }
 
@@ -307,6 +307,95 @@ footer {
   width: 50px;
   height: 50px;
 }
+
+/* ===== Latest Release ===== */
+
+.latest-release-card {
+  background: #171720;
+  border-radius: 24px;
+  padding: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.latest-release-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 18px;
+  margin-bottom: 25px;
+}
+
+.latest-release-card h3 {
+  margin: 15px 0 8px;
+  font-size: 1.8rem;
+}
+
+.latest-release-card p {
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+/* ===== Discography ===== */
+
+#discography-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.release-card {
+  background: #171720;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  transition: .25s;
+}
+
+.release-card:hover {
+  transform: translateY(-5px);
+  background: #22222d;
+}
+
+.release-card img {
+  width: 100%;
+  display: block;
+}
+
+.release-content {
+  padding: 18px;
+}
+
+.release-content h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.release-content p {
+  margin-top: 8px;
+  color: #aaa;
+  font-size: .95rem;
+}
+
+/* Responsive */
+
+@media (max-width:900px){
+
+  #discography-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media (max-width:600px){
+
+  #discography-grid{
+    grid-template-columns:1fr;
+  }
+
+}
   
 </style>
 
@@ -357,6 +446,40 @@ Luscinia is the Latin name for the nightingale, a bird famous for its beautiful 
 </div>
 </section>
 
+<section id="latest-release">
+  <div class="container">
+
+    <h2>🎵 Latest Release</h2>
+
+    <div class="latest-release-card">
+
+      <div id="latest-player"></div>
+
+      <h3 id="latest-title">Loading...</h3>
+
+      <p id="latest-date"></p>
+
+      <a class="button"
+         href="https://ffm.to/luscinia"
+         target="_blank">
+         Listen on all platforms
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<section id="discography">
+  <div class="container">
+
+    <h2>📀 Discography</h2>
+
+    <div id="discography-grid"></div>
+
+  </div>
+</section>
+  
 <section>
 <div class="container">
 
