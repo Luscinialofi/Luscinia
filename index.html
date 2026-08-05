@@ -340,14 +340,14 @@ footer {
 
 #discography-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
   margin-top: 30px;
 }
 
 .release-card {
   background: #171720;
-  border-radius: 20px;
+  border-radius: 14px;
   overflow: hidden;
   text-decoration: none;
   color: white;
@@ -355,48 +355,52 @@ footer {
 }
 
 .release-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   background: #22222d;
 }
 
 .release-card img {
   width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   display: block;
 }
 
 .release-content {
-  padding: 18px;
+  padding: 10px;
 }
 
 .release-content h3 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: .9rem;
 }
 
 .release-content p {
-  margin-top: 8px;
+  margin-top: 5px;
   color: #aaa;
-  font-size: .95rem;
+  font-size: .75rem;
 }
+
 
 /* Responsive */
 
 @media (max-width:900px){
 
-  #discography-grid{
-    grid-template-columns:repeat(2,1fr);
+  #discography-grid {
+    grid-template-columns: repeat(4,1fr);
   }
 
 }
+
 
 @media (max-width:600px){
 
-  #discography-grid{
-    grid-template-columns:1fr;
+  #discography-grid {
+    grid-template-columns: repeat(3,1fr);
+    gap: 12px;
   }
 
 }
-  
 </style>
 
 </head>
