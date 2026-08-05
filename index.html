@@ -620,6 +620,88 @@ For interviews, collaborations and music inquiries:
 © Luscinia — French Lo-Fi Beatmaker & Instrumental Producer
 </p>
 </footer>
+<script>
 
+async function loadYouTubeReleases() {
+
+  const latestResponse = await fetch("data/latest.json");
+  const latest = await latestResponse.json();
+
+
+  document.getElementById("latest-player").innerHTML = `
+    <iframe
+      src="https://www.youtube.com/embed/${latest.videoId}"
+      title="${latest.title}"
+      allowfullscreen>
+    </iframe>
+  `;
+
+
+  document.getElementById("latest-title").textContent =
+    latest.title;
+
+
+  document.getElementById("latest-date").textContent =
+    new Date(latest.publishedAt)
+      .toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      });
+
+
+
+  const discographyResponse =
+    await fetch("data/discography.json");
+
+  const releases =
+    await discographyResponse.json();
+
+
+  const grid =
+    document.getElementById("discography-grid");
+
+
+  grid.innerHTML = "";
+
+
+  releases.forEach(release => {
+
+    grid.innerHTML += `
+
+      <a class="release-card"
+         href="https://www.youtube.com/watch?v=${release.videoId}"
+         target="_blank">
+
+        <img src="${release.thumbnail}"
+             alt="${release.title}">
+
+        <div class="release-content">
+
+          <h3>${release.title}</h3>
+
+          <p>
+          ${new Date(release.publishedAt)
+            .toLocaleDateString("en-US", {
+              year:"numeric",
+              month:"short",
+              day:"numeric"
+            })}
+          </p>
+
+        </div>
+
+      </a>
+
+    `;
+
+  });
+
+}
+
+
+loadYouTubeReleases();
+
+</script>
 </body>
 </html>
